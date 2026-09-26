@@ -1,3 +1,4 @@
+import { sql } from "drizzle-orm";
 import { integer, text } from "drizzle-orm/sqlite-core";
 
 export const id = () =>
@@ -14,3 +15,6 @@ export const timestamps = {
     .$defaultFn(() => new Date())
     .$onUpdate(() => new Date()),
 };
+
+export const inList = (values: readonly string[]) =>
+  sql.raw(values.map((v) => `'${v.replace(/'/g, "''")}'`).join(", "));
