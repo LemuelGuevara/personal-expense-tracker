@@ -2,7 +2,7 @@ import { sql } from "drizzle-orm";
 import { check, integer, real, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
 import { accounts } from "./accounts";
 import { categories } from "./categories";
-import { id, inList, timestamps } from "./columns";
+import { id, inList, timestamps } from "../columns";
 import { transactions } from "./transactions";
 
 export const installmentStatuses = ["active", "completed", "cancelled"] as const;

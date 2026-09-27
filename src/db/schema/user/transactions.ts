@@ -1,5 +1,5 @@
 import { check, index, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { id, timestamps } from "./columns";
+import { id, timestamps } from "../columns";
 import { accounts } from "./accounts";
 import { sql } from "drizzle-orm";
 import { categories } from "./categories";

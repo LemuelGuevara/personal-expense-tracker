@@ -1,5 +1,5 @@
 import { sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { id, timestamps } from "./columns";
+import { id, timestamps } from "../columns";
 
 export const categories = sqliteTable("categories", {
   id: id(),

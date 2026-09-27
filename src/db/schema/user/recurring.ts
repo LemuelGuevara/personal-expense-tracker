@@ -2,7 +2,7 @@ import { sql } from "drizzle-orm";
 import { check, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { accounts } from "./accounts";
 import { categories } from "./categories";
-import { id, inList } from "./columns";
+import { id, inList } from "../columns";
 import { transactionTypes } from "./transactions";
 
 export const recurringFrequencies = ["daily", "weekly", "monthly", "yearly"] as const;

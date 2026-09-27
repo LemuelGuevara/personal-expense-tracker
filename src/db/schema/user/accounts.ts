@@ -1,5 +1,5 @@
 import { check, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { id, inList, timestamps } from "./columns";
+import { id, inList, timestamps } from "../columns";
 import { sql } from "drizzle-orm";
 
 export const accountTypes = [

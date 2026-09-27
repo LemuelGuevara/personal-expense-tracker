@@ -1,6 +1,11 @@
 import "dotenv/config";
 import { drizzle } from "drizzle-orm/libsql";
+import { commonRelations } from "./relations";
 
-export const db = drizzle({
-  connection: { url: process.env.DB_FILE_NAME! },
+export const commonAuthDB = drizzle({
+  connection: {
+    url: process.env.TURSO_COMMON_DB_URL!,
+    authToken: process.env.TURSO_COMMON_DB_TOKEN,
+  },
+  relations: commonRelations,
 });

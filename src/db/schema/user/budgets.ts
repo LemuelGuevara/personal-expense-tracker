@@ -1,7 +1,7 @@
 import { sql } from "drizzle-orm";
 import { check, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { categories } from "./categories";
-import { id, inList, timestamps } from "./columns";
+import { id, inList, timestamps } from "../columns";
 
 export const budgetPeriods = ["weekly", "monthly", "yearly"] as const;
 export type BudgetPeriod = (typeof budgetPeriods)[number];

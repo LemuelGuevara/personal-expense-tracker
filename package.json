@@ -10,7 +10,13 @@
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx}\"",
     "check": "prettier --check \"**/*.{ts,tsx,js,jsx}\"",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "db:common:generate": "drizzle-kit generate --config=drizzle.common.config.ts",
+    "db:common:push": "drizzle-kit push --config=drizzle.common.config.ts",
+    "db:common:studio": "drizzle-kit studio --config=drizzle.common.config.ts",
+    "db:user:generate": "drizzle-kit generate --config=drizzle.user.config.ts",
+    "db:user:push": "drizzle-kit push --config=drizzle.user.config.ts",
+    "db:user:studio": "drizzle-kit studio --config=drizzle.user.config.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
@@ -23,6 +29,8 @@
     "@tanstack/react-router-ssr-query": "latest",
     "@tanstack/react-start": "latest",
     "@tanstack/router-plugin": "latest",
+    "@tursodatabase/api": "^2.0.5",
+    "better-auth": "^1.7.6",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.2.6",
     "dotenv": "^18.0.4",
@@ -49,7 +57,7 @@
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tsx": "^4.23.15",
-    "typescript": "^6",
+    "typescript": "^7",
     "vite": "^8",
     "vitest": "^4"
   }

@@ -1,5 +1,5 @@
 import { primaryKey, sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { id } from "./columns";
+import { id } from "../columns";
 import { transactions } from "./transactions";
 
 export const tags = sqliteTable("tags", {
